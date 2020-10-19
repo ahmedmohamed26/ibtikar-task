@@ -33,7 +33,7 @@ const Cart = (props) => {
 			</div>) : (<h2 className='text-center text-capitalize text-secondary'>Your shopping cart has no products</h2>)}
 			<FormModal showForm={showForm} hideForm={hideForm} />
 		</div>
-	);
+	); 
 };
 
 const mapStateToProps = (state) => {
