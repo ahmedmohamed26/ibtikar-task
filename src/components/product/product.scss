@@ -1,0 +1,39 @@
+@import "../../scss/variables";
+.product-item{
+    a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: none;
+        }
+        .parent {
+            box-shadow: $box-shadow;
+            border-radius: $border-radius;
+            overflow: hidden;
+        
+            img {
+                width: 100%;
+                height: 200px;
+            }
+        
+            .product-description {
+                padding: $padding;
+        
+                h4 {
+                    color: $gray-dark;
+                    font-size: $medium-bold;
+                    text-transform: capitalize;
+                }
+        
+                h6 {
+                    color: $secondary;
+                    text-transform: capitalize;
+                }
+        
+                .card-img {
+                    width: $widthImg;
+                    height: $heightImg;
+                }
+            }
+        }
+    }
+}

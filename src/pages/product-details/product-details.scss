@@ -1,0 +1,29 @@
+@import "../../scss/variables";
+.product{
+    padding: $padding;
+    .product-img{
+       img{
+        border-radius: $border-radius;
+       }
+    }
+    .product-title{
+        h1{
+            font-size:$large-bold;
+            color: $gray-dark;
+            text-transform: capitalize;
+            margin-bottom: $margin-bottom;
+        }
+        h6{
+            color:$gray;
+            font-size: $medium-bold;
+            margin-bottom: $margin-bottom;
+        }
+        .btn,.form-control{
+            margin-bottom: $margin-bottom;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}

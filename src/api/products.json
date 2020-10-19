@@ -1,0 +1,66 @@
+ [
+    {
+      "id": 1,
+      "image": "/images/1.jpg",
+      "name": "hand-bag",
+      "price": 300,
+      "instock": 22,
+      "isFavorite": true
+    },
+    {
+      "id": 2,
+      "image": "/images/2.jpg",
+      "name": "t-shirt",
+      "price": 200,
+      "instock": 20,
+      "isFavorite": false
+    },
+    {
+      "id": 3,
+      "image":"/images/3.jpg",
+      "name": "pullover",
+      "price": 100,
+      "instock": 10,
+      "isFavorite": true
+    },
+    {
+      "id": 4,
+      "image":"/images/5.jpg",
+      "name": "jeans",
+      "price": 100,
+      "instock": 10,
+      "isFavorite": true
+    },
+    {
+      "id": 5,
+      "image": "/images/6.jpg",
+      "name": "bag",
+      "price": 150,
+      "instock": 10,
+      "isFavorite": false
+    },
+    {
+      "id": 6,
+      "image": "/images/8.jpg",
+      "name": "Boots",
+      "price": 100,
+      "instock": 10,
+      "isFavorite": false
+    },
+    {
+      "id": 7,
+      "image": "/images/7.jpg",
+      "name": "t-shirt",
+      "price": 100,
+      "instock": 10,
+      "isFavorite": true
+    },
+    {
+      "id": 8,
+      "image": "/images/9.jpg",
+      "name": "Boots",
+      "price": 100,
+      "instock": 10,
+      "isFavorite": false
+    }
+  ]

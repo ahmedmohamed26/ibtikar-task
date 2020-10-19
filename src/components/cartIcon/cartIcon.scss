@@ -1,0 +1,30 @@
+@import "../../scss/variables";
+
+.cart-icon{
+    position: relative;
+    .dropdown{
+        padding: 0 0;
+        .fa{
+            font-size: $large-bold;
+            color: $gray;
+        }
+        span{
+            position: absolute;
+            right: -8px;
+            top: -10px;    
+        }
+        .dropdown-item{
+            font-size: 1rem;
+            padding: 5px 10px;
+            .fa{
+                color: #707070;
+            }
+            h6{
+                color: #707070;
+                margin-left:10px;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+}
