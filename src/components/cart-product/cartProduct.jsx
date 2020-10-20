@@ -5,7 +5,6 @@ import {removeFromCart} from '../../store/actions/actions';
 const CartProduct = (props) => {
 	const { item , index} = props;
 	const { product } = item;
-	console.log(props)
 	return (
 		<section className='cart-product'>
 			<div className='parent mt-3 mb-3'>

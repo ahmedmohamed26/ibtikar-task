@@ -10,14 +10,12 @@ const ProductDetails = (props) => {
 	const [quantity, setQuantity] = useState(1);
 
 	useEffect(() => {
-		console.log(id);
 		getproductDetails();
-	}, []);
+	});
 
 	function getproductDetails() {
 		getProductById(parseInt(id))
 			.then((res) => {
-				console.log(res);
 				setProduct(res);
 			})
 			.catch((error) => {

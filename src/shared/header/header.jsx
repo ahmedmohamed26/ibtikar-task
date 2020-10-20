@@ -21,9 +21,8 @@ import CartIcon from '../../components/cartIcon/cartIcon';
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [dropdownProfileOpen, setDropdownProfileOpen] = useState(false);
-	// const [dropdownCartOpen, setDropdownCartOpen] = useState(false);
-	const toggleProfileDropdown = () => setDropdownProfileOpen((prevState) => !prevState);
-	// const toggleCartDropdown = () => setDropdownCartOpen((prevState) => !prevState);
+	const toggleProfileDropdown = () =>
+		setDropdownProfileOpen((prevState) => !prevState);
 	const toggle = () => setIsOpen(!isOpen);
 	return (
 		<header>
@@ -47,30 +46,28 @@ const Header = () => {
 						<NavbarText className='pb-0'>
 							<CartIcon />
 						</NavbarText>
-						<NavbarText>
-							<Dropdown
-								className='dropdown'
-								isOpen={dropdownProfileOpen}
-								toggle={toggleProfileDropdown}>
-								<DropdownToggle tag='span' className='nav-link'>
+						<Dropdown
+							isOpen={dropdownProfileOpen}
+							toggle={toggleProfileDropdown}>
+							<DropdownToggle tag='div' className='nav-link'>
+
 									<img
 										src='/images/10.jpg'
 										className='card-img'
-										alt='profile image'
+										alt=''
 									/>
-								</DropdownToggle>
-								<DropdownMenu>
-									<DropdownItem className='d-flex align-items-center dropdown-item'>
-										<i className='fa fa-pencil'></i>
-										<h6 className='mb-0'>View / Edit Profile</h6>
-									</DropdownItem>
-									<DropdownItem className='d-flex align-items-center dropdown-item'>
-										<i className='fa fa-circle-o-notch'></i>
-										<h6 className='mb-0'>sign out</h6>
-									</DropdownItem>
-								</DropdownMenu>
-							</Dropdown>
-						</NavbarText>
+							</DropdownToggle>
+							<DropdownMenu>
+								<DropdownItem className='d-flex align-items-center dropdown-item'>
+									<i className='fa fa-pencil'></i>
+									<h6 className='mb-0'>View / Edit Profile</h6>
+								</DropdownItem>
+								<DropdownItem className='d-flex align-items-center dropdown-item'>
+									<i className='fa fa-circle-o-notch'></i>
+									<h6 className='mb-0'>sign out</h6>
+								</DropdownItem>
+							</DropdownMenu>
+						</Dropdown>
 					</Collapse>
 				</Navbar>
 			</div>

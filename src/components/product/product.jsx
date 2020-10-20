@@ -6,7 +6,6 @@ import './product.scss';
 const Product = (props) => {
 	const { product } = props;
 	useEffect(() => {
-		console.log(product);
 	}, [product]);
 
 	return (
