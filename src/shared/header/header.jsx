@@ -44,7 +44,7 @@ const Header = () => {
 								</Link>
 							</NavItem>
 						</Nav>
-						<NavbarText>
+						<NavbarText className='pb-0'>
 							<CartIcon />
 						</NavbarText>
 						<NavbarText>

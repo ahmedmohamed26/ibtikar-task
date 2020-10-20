@@ -10,6 +10,7 @@ import Toaster from '../toast/toast';
 const FormModal = (props) => {
 	const { showForm } = props;
 	const [toast, setToast] = useState(false);
+	const [formInfo, setFormInfo] = useState({});
 	const initialValues = {
 		name: '',
 		email: '',
@@ -33,18 +34,18 @@ const FormModal = (props) => {
 
 	const onSubmit = (values, onSubmitProps) => {
 		onSubmitProps.resetForm();
-		alert(JSON.stringify(values));
+		setFormInfo(values);
 		props.hideForm();
 		props.clearCart();
 		setToast(true);
 		setTimeout(() => {
 			setToast(false);
-		}, 5000);
+		}, 3000);
 	};
 
 	return (
 		<div>
-			{toast ? <Toaster /> : null}
+			{toast ? <Toaster formInfo={formInfo} /> : null}
 			<Modal isOpen={showForm} toggle={props.hideForm}>
 				<ModalHeader toggle={props.hideForm}>User Information</ModalHeader>
 				<ModalBody>
