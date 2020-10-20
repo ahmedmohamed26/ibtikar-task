@@ -40,7 +40,7 @@ const FormModal = (props) => {
 		setToast(true);
 		setTimeout(() => {
 			setToast(false);
-		}, 3000);
+		}, 4000);
 	};
 
 	return (
@@ -107,7 +107,7 @@ const FormModal = (props) => {
 									<button
 										className='btn btn-outline-secondary mt-3'
 										type='submit'
-										disabled={!formik.isValid || formik.isSubmitting}>
+										disabled={!formik.isValid}>
 										Submit
 									</button>
 								</Form>
