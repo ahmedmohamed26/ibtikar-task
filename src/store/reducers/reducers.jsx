@@ -1,6 +1,14 @@
 import { ADD_TO_CART, REMOVE_FROM_CART,CLEAR_CART } from '../types/types';
+const initialState = {
+	cart: [],
+};
+export default function cartReducer(state=initialState, action) {
 
-export default function cartReducer(state, action) {
+
+	// let updateProductById = () => (
+	// 	state.cart.map(
+	// 		item => item.id === action.productsInfo.id ? {product:action.productsInfo, quantity: action.quantity} : {product: action.productsInfo,quantity: action.quantity})
+	//   )
 	switch (action.type) {
 		case ADD_TO_CART: {
 			return {

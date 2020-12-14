@@ -30,14 +30,16 @@ const ProductDetails = (props) => {
 		if (quantity <= 1) return;
 		setQuantity(quantity - 1);
 	};
-	// const addProduct = () => {
-	// 	const value = event.target.value;
-	// 	if (value < 1) return;
-	// 	setQuantity(value);
-	// };
 
 	const addProductToCart = (product) => {
-		props.addToCart(product, quantity);
+		let productFoundInCart = props.cart.find((x) => x.product.id === product.id);
+		let findIndexProduct = props.cart.findIndex((object) => object.product.id === product.id);
+		if (productFoundInCart) {
+			props.cart.splice(findIndexProduct,1)
+			props.addToCart(product, productFoundInCart.quantity + quantity);
+		} else {
+			props.addToCart(product, quantity);
+		}
 	};
 
 	return (
@@ -58,16 +60,21 @@ const ProductDetails = (props) => {
 						<h1>{product.name}</h1>
 						<h6>Price : {product.price}$</h6>
 						<div className='btn-group' role='group' aria-label='Basic example'>
-						<button type='button' className='btn btn-outline-secondary btn-sm' onClick={removeProduct}>
+							<button
+								type='button'
+								className='btn btn-outline-secondary btn-sm'
+								onClick={removeProduct}>
 								-
 							</button>
 							<span className='btn btn-outline-secondary btn-sm'>
-							{quantity}
+								{quantity}
 							</span>
-							<button type='button' className='btn btn-outline-secondary btn-sm' onClick={addProduct}>
-							+
+							<button
+								type='button'
+								className='btn btn-outline-secondary btn-sm'
+								onClick={addProduct}>
+								+
 							</button>
-							
 						</div>
 						<h6 className='mt-2'>Total Price : {quantity * product.price}$</h6>
 						<button
@@ -92,10 +99,7 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
 	return {
 		cart: state.cart,
-		totalQuantity: state.cart.reduce(
-			(total, item) => total + item.quantity,
-			0
-		),
+		totalQuantity: state.cart.reduce((total, item) => total + item.quantity, 0),
 	};
 };
 

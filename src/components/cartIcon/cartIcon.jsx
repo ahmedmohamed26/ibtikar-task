@@ -8,6 +8,7 @@ const CartIcon = (props) => {
 			<Link to='/cart'>
 				<i className='fa fa-shopping-cart'></i>
 				<span className='badge badge-primary'>{props.totalQuantity}</span>
+
 			</Link>
 		</div>
 	);
@@ -23,3 +24,11 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(CartIcon);
+
+
+// return {
+// 	totalQuantity: state.cart.reduce(
+// 		(total, item) => total + parseInt(item.quantity),
+// 		0
+// 	),
+// };
