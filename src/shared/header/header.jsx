@@ -6,7 +6,6 @@ import {
 	Collapse,
 	Navbar,
 	NavbarToggler,
-	NavbarBrand,
 	Nav,
 	NavItem,
 	NavbarText,
@@ -28,12 +27,12 @@ const Header = () => {
 		<header>
 			<div className='container'>
 				<Navbar className='navbar' light expand='md'>
-					<NavbarBrand href='/products'>Store</NavbarBrand>
+					<Link className='nav-brand' to='/home'>Store</Link>
 					<NavbarToggler onClick={toggle} />
 					<Collapse isOpen={isOpen} navbar>
 						<Nav className='mr-auto' navbar>
 							<NavItem className='nav-item'>
-								<Link className='nav-link' to='/products'>
+								<Link className='nav-link' to='/home'>
 									products
 								</Link>
 							</NavItem>
